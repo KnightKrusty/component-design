@@ -1,0 +1,79 @@
+/* -------------------------------------------------------------- */
+/* CSS Normalizer */
+/* -------------------------------------------------------------- */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-smooth: always; }
+
+html {
+  font-size: 62.5%; }
+
+.body {
+  position: relative; }
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+  width: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  margin-top: 10px;
+  border-radius: 1rem;
+  margin: 0 auto; }
+  @media (max-width: 75em) {
+    .card {
+      width: 95%; } }
+  .card__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 2rem 1.8rem; }
+  .card__profile {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    overflow: hidden;
+    user-select: none;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 2rem;
+    transform: scale(1.5); }
+    .card__profile__image {
+      aspect-ratio: auto 32 / 32;
+      vertical-align: middle;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transform: scale(1.2); }
+  .card__name {
+    font-size: 1.5rem;
+    padding: 0.6rem 0px 0 0; }
+  .card__image__main {
+    width: 100%;
+    height: auto;
+    border-top: 1px solid #f7f7f7;
+    border-radius: 0.2rem;
+    background-size: cover; }
+  .card__body {
+    margin: 0.5rem 1.5rem 0 1.5rem; }
+  .card__like_p {
+    font-size: 1.2rem;
+    margin: 1.5rem 0 0.5rem 0; }
+  .card__like_span {
+    font-weight: bold; }
+  .card__caption_p {
+    font-size: 1.5rem;
+    margin: 0 0 2rem 0; }
+  .card__icon {
+    font-size: 2.5rem;
+    font-weight: 400; }
+    .card__icon__heart {
+      margin-right: 1rem; }
+  .card__empty {
+    margin: 20px; }
+  .card__span {
+    font-weight: 600; }
