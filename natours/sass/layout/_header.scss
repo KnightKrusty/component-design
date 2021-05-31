@@ -1,0 +1,44 @@
+/* -------------------------------------------------------------- */
+/* Header */
+/* -------------------------------------------------------------- */
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/hero.jpg);
+  /* Adapt to ViewPort */
+  background-size: cover;
+  /* Top of the image stays the same and bottom get cropped */
+  background-position: top;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0%, 100% 75vh, 0 100%);
+  position: relative;
+
+  @include respond(phone) {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 85vh, 0 100%);
+  }
+
+  &__logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+  }
+
+  &__logo {
+    height: 30px;
+  }
+
+  &__text-box {
+    position: absolute;
+    /* In relation to the parent element  */
+    top: 40%;
+    left: 50%;
+    /* relation to element itself */
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
